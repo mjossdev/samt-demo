@@ -1,0 +1,12 @@
+package tools.samt.greeter
+
+record Greeting {
+    message: String
+}
+
+typealias Name = String(1..50)
+
+service Greeter {
+    greet(name: Name): Greeting
+    greetMany(names: List<Name>): Map<Name, Greeting>
+}
